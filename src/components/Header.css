@@ -1,0 +1,13 @@
+.ant-menu-dark .ant-menu-item-selected {
+  background-color: #FF710F !important;
+  color: white !important;
+}
+
+.ant-menu-dark .ant-menu-item-selected > a,
+.ant-menu-dark .ant-menu-item-selected > span {
+  color: white !important;
+}
+
+.ant-menu-dark .ant-menu-item-selected .anticon {
+  color: white !important;
+}
