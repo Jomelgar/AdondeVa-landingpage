@@ -7,11 +7,54 @@ const { Title, Paragraph } = Typography;
 const Inicio = () => {
   return (
     <div className="relative overflow-hidden min-h-screen bg-[#f5f7fa]">
+      {/* SECCIÓN HERO CON LOGO */}
+      <section className="relative flex flex-col justify-center items-center text-center py-20 px-6 bg-gradient-to-b from-[#e8edf3] via-white to-[#ffffff] overflow-hidden">
+
+        {/* Círculos decorativos animados */}
+        <div className="absolute top-0 left-0 w-72 h-72 bg-[#0D2841] rounded-full opacity-20 blur-3xl -translate-x-1/3 -translate-y-1/3 animate-[pulse_5s_ease-in-out_infinite]"></div>
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#FF710F] rounded-full opacity-20 blur-3xl translate-x-1/3 translate-y-1/3 animate-[pulse_6s_ease-in-out_infinite]"></div>
+
+        {/* Logo con animación suave */}
+        <img
+          src="/logo_text.png"
+          alt="Logo"
+          className="relative z-10 max-w-xs sm:max-w-sm md:max-w-md rounded-full drop-shadow-xl animate-fadeIn"
+          style={{ animationDelay: "0.2s" }}
+        />
+
+        {/* Encabezado */}
+        <h1 className="relative z-10 mt-8 text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 max-w-3xl animate-fadeInUp" style={{ animationDelay: "0.4s" }}>
+          Conecta pasajeros y transporte con <span className="text-[#FF710F]">facilidad</span>, <span className="text-[#0D2841]">seguridad</span> y <span className="text-[#FF710F]">puntualidad</span>.
+        </h1>
+
+        {/* Subtítulo */}
+        <p className="relative z-10 mt-4 text-lg sm:text-xl text-gray-600 font-medium max-w-2xl animate-fadeInUp" style={{ animationDelay: "0.6s" }}>
+          La solución moderna para empresas y usuarios que buscan eficiencia en el transporte urbano.
+        </p>
+
+      </section>
+
+      {/* Animaciones personalizadas */}
+      <style>
+      {`
+        @keyframes fadeIn {
+          from { opacity: 0 }
+          to { opacity: 1 }
+        }
+        @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(20px) }
+          to { opacity: 1; transform: translateY(0) }
+        }
+        .animate-fadeIn { animation: fadeIn 0.8s ease forwards }
+        .animate-fadeInUp { animation: fadeInUp 0.8s ease forwards }
+      `}
+      </style>
+
       {/* Círculos decorativos generales */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-[#0D2841] rounded-full opacity-20 -translate-x-1/3 -translate-y-1/3 animate-pulse"></div>
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-[#FF710F] rounded-full opacity-20 translate-x-1/3 translate-y-1/3 animate-pulse"></div>
 
-      {/* Sección 1: Imagen + texto con fondo degradado azul suave */}
+      {/* Sección 1: Imagen + texto */}
       <section className="relative z-10 py-16 px-6 bg-gray-300 shadow-inner overflow-hidden">
         {/* Círculos decorativos sección 1 */}
         <div className="absolute -top-16 -left-16 w-40 h-40 bg-[#0D2841] rounded-full opacity-30 animate-pulse"></div>
@@ -39,18 +82,16 @@ const Inicio = () => {
         </Row>
       </section>
 
-      {/* Sección 3: Prototipo con fondo degradado suave naranja */}
-      <section className="relative z-10 py-12 flex flex-col items-center bg-gradient-to-t from-white via-[#fff3e0] to-[#fff8f0] rounded-t-3xl shadow-md overflow-hidden">
+      {/* Sección 3: Prototipo */}
+      <section className="relative z-10 py-12 flex flex-col items-center bg-gradient-to-t from-white via-[#fff3e0] to-[#fff8f0] rounded-t-3xl shadow-lg overflow-hidden">
         {/* Círculos decorativos sección 3 */}
         <div className="absolute -top-10 -left-10 w-32 h-32 bg-[#FF710F] rounded-full opacity-25 animate-pulse"></div>
         <div className="absolute bottom-10 right-10 w-40 h-40 bg-[#FBBF24] rounded-full opacity-15 animate-pulse"></div>
 
-        {/* Título */}
         <h2 className="relative z-20 mb-3 text-2xl sm:text-5xl text-center font-extrabold text-[#FF710F] drop-shadow-3sm select-none">
           Vista previa del producto
         </h2>
 
-        {/* Texto descriptivo */}
         <p className="relative z-20 mb-8 max-w-xl mx-4 sm:mx-0 px-6 py-4 border-2 border-[#FF710F] rounded-2xl mt-5 text-center text-[#7a4e00] text-sm sm:text-base leading-relaxed font-medium shadow-sm select-text bg-gradient-to-r from-[#fff3e0] to-[#fff8f0]">
           Explora nuestro <span className="font-bold">prototipo móvil</span> para descubrir cómo los usuarios pueden <span className="font-bold">interactuar con la plataforma</span>.  
           Esta <span className="font-bold">vista previa</span> te permite <span className="font-bold">experimentar la interfaz de forma realista</span> y anticipar la <span className="font-bold">experiencia de uso final</span>.
@@ -70,7 +111,7 @@ const Inicio = () => {
         </Card>
       </section>
 
-      {/* Sección 2: Planes para empresas */}
+      {/* Sección 2: Planes */}
       <section
         className="relative z-10 py-12 px-6 bg-gradient-to-r from-[#e0f2fe] via-[#bae6fd] to-[#e0f2fe] rounded-b-3xl shadow-md overflow-hidden"
         style={{
@@ -97,7 +138,11 @@ const Inicio = () => {
           {/* Plan 1 */}
           <Col xs={24} md={10} style={{ display: "flex" }}>
             <Card
-              title="• Plan Pago Directo del Pasajero"
+              title={
+                <h1 className="!text-xl border-b-2 !border-[#0D2841] pb-1">
+                  • Plan Pago Directo del Pasajero
+                </h1>
+              }
               bordered={false}
               style={{
                 border: "2px solid #0D2841",
@@ -121,7 +166,9 @@ const Inicio = () => {
           {/* Plan 2 */}
           <Col xs={24} md={10} style={{ display: "flex" }}>
             <Card
-              title="• Plan Empresa Patrocinadora"
+              title={<h1 className="!text-xl border-b-2 !border-[#FF710F] pb-1">
+                  • Plan Empresa Patrocinadora
+                </h1>}
               bordered={false}
               style={{
                 border: "2px solid #FF710F",
@@ -134,12 +181,13 @@ const Inicio = () => {
               headStyle={{ color: "#FF710F", fontWeight: "bold" }}
             >
               <Paragraph className="text-base" style={{ flexGrow: 1 }}>
-                En este plan, la empresa nos paga directamente y puede agregar a sus
-                pasajeros mediante enlaces de invitación personalizados.
+                En este plan, <p className="font-bold inline">la empresa nos paga directamente</p> y puede agregar a sus
+                pasajeros mediante <p className="font-bold inline">enlaces de invitación personalizados</p>.
               </Paragraph>
+
               <Paragraph className="text-base">
-                Perfecto para brindar un beneficio adicional a empleados, garantizando
-                acceso sin preocuparse por pagos individuales.
+                Perfecto para <p className="font-bold inline">brindar un beneficio adicional a empleados</p>, garantizando
+                acceso <p className="font-bold inline">sin preocuparse por pagos individuales</p>.
               </Paragraph>
             </Card>
           </Col>
