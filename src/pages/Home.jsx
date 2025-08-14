@@ -16,9 +16,9 @@ const Inicio = () => {
 
         {/* Logo con animación suave */}
         <img
-          src="/logo_text.png"
+          src="/logo.png"
           alt="Logo"
-          className="relative z-10 max-w-xs sm:max-w-sm md:max-w-md rounded-full drop-shadow-xl animate-fadeIn"
+          className="relative z-10 border-gray-700 bg-gray-100 border-[4px] max-w-xs sm:max-w-sm md:max-w-md rounded-full drop-shadow-5xl animate-fadeIn"
           style={{ animationDelay: "0.2s" }}
         />
 
@@ -51,15 +51,18 @@ const Inicio = () => {
       </style>
 
       {/* Círculos decorativos generales */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-[#0D2841] rounded-full opacity-20 -translate-x-1/3 -translate-y-1/3 animate-pulse"></div>
-      <div className="absolute bottom-0 right-0 w-72 h-72 bg-[#FF710F] rounded-full opacity-20 translate-x-1/3 translate-y-1/3 animate-pulse"></div>
+      <div className="absolute  top-0 left-0 w-64 h-64 bg-[#0D2841] rounded-full opacity-20 -translate-x-1/3 -translate-y-1/3 animate-pulse"></div>
+      <div className="absolute bottom-0  right-0 w-72 h-72 bg-[#FF710F] rounded-full opacity-20 translate-x-1/3 translate-y-1/3 animate-pulse"></div>
 
       {/* Sección 1: Imagen + texto */}
       <section className="relative z-10 py-16 px-6 bg-gray-300 shadow-inner overflow-hidden">
         {/* Círculos decorativos sección 1 */}
-        <div className="absolute -top-16 -left-16 w-40 h-40 bg-[#0D2841] rounded-full opacity-30 animate-pulse"></div>
+        <div className="absolute -top-16 -left-16 w-40 h-40 bg-[#0D2841] rounded-full opacity-30 animate-pulse blur-2xl"></div>
+        <div className="absolute top-10 right-10 w-32 h-32 bg-[#FF710F] rounded-full opacity-20 animate-pulse blur-xl"></div>
         <div className="absolute top-10 right-10 w-32 h-32 bg-[#FF710F] rounded-full opacity-20 animate-pulse"></div>
+        <div className="absolute bottom-10 left-20 w-24 h-24 bg-[#60a5fa] rounded-full opacity-15 animate-pulse blur-xl"></div>
         <div className="absolute bottom-10 left-20 w-24 h-24 bg-[#60a5fa] rounded-full opacity-15 animate-pulse"></div>
+        <div className="absolute bottom-10 left-8 w-36 h-24 bg-[#60a5fa] rounded-full opacity-15 animate-pulse blur-3xl"></div>
 
         <Row gutter={[32, 32]} align="middle" justify="center">
           <Col xs={24} md={12} className="flex justify-center">
@@ -85,8 +88,9 @@ const Inicio = () => {
       {/* Sección 3: Prototipo */}
       <section className="relative z-10 py-12 flex flex-col items-center bg-gradient-to-t from-white via-[#fff3e0] to-[#fff8f0] rounded-t-3xl shadow-lg overflow-hidden">
         {/* Círculos decorativos sección 3 */}
-        <div className="absolute -top-10 -left-10 w-32 h-32 bg-[#FF710F] rounded-full opacity-25 animate-pulse"></div>
+        <div className="absolute -top-10 -left-10 w-32 h-32 bg-[#FF710F] rounded-full opacity-25 animate-pulse blur-xl"></div>
         <div className="absolute bottom-10 right-10 w-40 h-40 bg-[#FBBF24] rounded-full opacity-15 animate-pulse"></div>
+        <div className="absolute bottom-10 right-10 w-40 h-40 bg-[#FBBF24] rounded-full opacity-15 animate-pulse blur-3xl"></div>
 
         <h2 className="relative z-20 mb-3 text-2xl sm:text-5xl text-center font-extrabold text-[#FF710F] drop-shadow-3sm select-none">
           Vista previa del producto
@@ -121,9 +125,12 @@ const Inicio = () => {
         }}
       >
         {/* Círculos decorativos sección 2 */}
-        <div className="absolute top-10 left-10 w-36 h-36 bg-[#FF710F] rounded-full opacity-10 animate-pulse"></div>
+        <div className="absolute top-10 left-10 w-36 h-36 bg-[#FF710F] rounded-full opacity-10 animate-pulse "></div>
+        <div className="absolute top-10 left-10 w-36 h-36 bg-[#FF710F] rounded-full opacity-10 animate-pulse blur-xl"></div>
         <div className="absolute bottom-16 right-16 w-48 h-48 bg-[#0000FF] rounded-full opacity-10 animate-pulse"></div>
+        <div className="absolute bottom-16 right-16 w-48 h-48 bg-[#0000FF] rounded-full opacity-10 animate-pulse blur-xl"></div>
         <div className="absolute top-20 right-24 w-24 h-24 bg-blue-400 rounded-full opacity-5 animate-pulse"></div>
+        <div className="absolute top-20 right-24 w-24 h-24 bg-blue-400 rounded-full opacity-5 animate-pulse blur-xl"></div>
 
         <div className="text-center mb-12 relative z-20">
           <h1 className="font-extrabold text-2xl sm:text-4xl mb-5 text-gray-800">
