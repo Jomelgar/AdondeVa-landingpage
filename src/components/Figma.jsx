@@ -26,23 +26,16 @@ const FigmaPhone = () => {
           <Spin size="large" tip="Cargando prototipo..." />
         </div>
       )}
-
-      {/* Iframe */}
-      <iframe
-        src="https://embed.figma.com/proto/fkxtxwFyTqFPivDOn5gWyn/Prototipo-DondeVa-GE2?node-id=7-54&embed-host=share&scaling=scale-down&hide-ui=1"
-        allowFullScreen
-        style={{
-          border: "1px solid rgba(0, 0, 0, 0.1)",
-          width: "345px",
-          height: "650px",
-          borderRadius: "20px",
-          boxShadow: "0 8px 24px rgba(0,0,0,0.12)",
-          transition: "filter 0.3s ease",
-          filter: loading ? "blur(1px) brightness(0.9)" : "none",
-        }}
-        onLoad={handleLoad}
-        title="Prototipo AdondeVa"
-      ></iframe>
+  <iframe
+    src="https://embed.figma.com/proto/fkxtxwFyTqFPivDOn5gWyn/Prototipo-DondeVa-GE2?node-id=7-54&embed-host=share&scaling=scale-down&hide-ui=0&fullscreen=1"
+    style={{
+      width: "100%",
+      height: "800px",
+      border: "none",
+    }}
+    onLoad={handleLoad}
+    title="Prototipo AdondeVa"
+  />
     </div>
   );
 };
